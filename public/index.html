@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Versant English Placement Test Simulator</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div id="app">
+    <header class="top-bar">
+      <div>
+        <h1>Versant English Placement Test Simulator</h1>
+        <p class="subtitle">Practice only. Not an official scoring tool.</p>
+      </div>
+      <div class="timers">
+        <div>
+          <span class="label">Total Time</span>
+          <span id="total-timer">--:--</span>
+        </div>
+        <div>
+          <span class="label">Section Time</span>
+          <span id="section-timer">--:--</span>
+        </div>
+        <div>
+          <span class="label">Question Time</span>
+          <span id="question-timer">--:--</span>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section id="gate" class="panel active">
+        <h2>Pre-Test Gate</h2>
+        <ol class="checklist">
+          <li id="check-chrome">Chrome browser detected <span class="status">Pending</span></li>
+          <li id="check-mic">Microphone permission granted <span class="status">Pending</span></li>
+          <li id="check-noise">Background noise check <span class="status">Pending</span></li>
+          <li id="check-ready">Ready to start confirmation <span class="status">Pending</span></li>
+          <li id="check-fullscreen">Fullscreen enabled <span class="status">Pending</span></li>
+          <li id="check-desktop">Desktop viewport detected <span class="status">Pending</span></li>
+        </ol>
+        <div class="gate-actions">
+          <button id="btn-run-checks">Run Checks</button>
+          <button id="btn-ready" disabled>I am Ready to Start Test</button>
+        </div>
+        <p class="warning">This simulation is desktop-only, fullscreen, and enforces strict timing. You cannot pause or go back.</p>
+      </section>
+
+      <section id="test" class="panel">
+        <div class="section-header">
+          <h2 id="section-title">Section</h2>
+          <p id="section-instructions">Instructions will appear here.</p>
+        </div>
+        <div id="question-area" class="question-area"></div>
+        <div class="controls">
+          <button id="btn-force-next" class="danger">Auto-Advance</button>
+        </div>
+      </section>
+
+      <section id="complete" class="panel">
+        <h2>Test Completed</h2>
+        <p>Your responses have been saved. Thank you for practicing.</p>
+      </section>
+    </main>
+  </div>
+
+  <div id="fullscreen-block" class="fullscreen-block hidden">
+    <p>Fullscreen is required. Please return to fullscreen to continue.</p>
+    <button id="btn-fullscreen">Enter Fullscreen</button>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

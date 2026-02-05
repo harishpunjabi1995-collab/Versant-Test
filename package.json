@@ -1,0 +1,14 @@
+{
+  "name": "versant-test-simulator",
+  "version": "1.0.0",
+  "description": "Versant English Placement Test simulator",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "multer": "^1.4.5-lts.1",
+    "uuid": "^9.0.1"
+  }
+}
